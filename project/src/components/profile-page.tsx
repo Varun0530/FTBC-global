@@ -1,6 +1,6 @@
 import { useEffect, useMemo } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import TPLogo from './tp-logo';
+import tetrapakLogo from '../assets/tetrapak-logo.svg';
 
 interface ParticipantData {
   name: string;
@@ -155,18 +155,18 @@ export default function ProfilePage() {
 
         body {
           font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-          background: #050505;
-          color: #ffffff;
+          background: #FFFFFF;
+          color: #1a1a1a;
           min-height: 100vh;
         }
 
         /* Main container with radial highlights */
         .profile-container {
           min-height: 100vh;
-          background: #050505;
+          background: #FFFFFF;
           background-image: 
-            radial-gradient(circle at 20% 30%, rgba(6, 240, 224, 0.03) 0%, transparent 50%),
-            radial-gradient(circle at 80% 70%, rgba(6, 240, 224, 0.03) 0%, transparent 50%);
+            radial-gradient(circle at 20% 30%, rgba(32, 86, 174, 0.03) 0%, transparent 50%),
+            radial-gradient(circle at 80% 70%, rgba(32, 86, 174, 0.03) 0%, transparent 50%);
           padding: 2rem 1rem;
         }
 
@@ -201,9 +201,9 @@ export default function ProfilePage() {
         .nav-btn {
           padding: 0.5rem 1rem;
           background: transparent;
-          border: 1px solid rgba(6, 240, 224, 0.3);
+          border: 1px solid rgba(32, 86, 174, 0.3);
           border-radius: 6px;
-          color: rgba(255, 255, 255, 0.7);
+          color: rgba(26, 26, 26, 0.7);
           font-weight: 500;
           font-size: 0.875rem;
           cursor: pointer;
@@ -212,12 +212,12 @@ export default function ProfilePage() {
         }
 
         .nav-btn:hover {
-          color: #06f0e0;
-          border-color: #06f0e0;
+          color: #2056AE;
+          border-color: #2056AE;
         }
 
         .nav-btn:focus {
-          outline: 2px solid #06f0e0;
+          outline: 2px solid #2056AE;
           outline-offset: 2px;
         }
 
@@ -229,19 +229,19 @@ export default function ProfilePage() {
 
         /* Main profile card */
         .profile-card {
-          background: rgba(20, 20, 20, 0.8);
-          border: 1px solid rgba(6, 240, 224, 0.15);
+          background: rgba(255, 255, 255, 0.95);
+          border: 1px solid rgba(32, 86, 174, 0.15);
           border-radius: 14px;
           box-shadow: 
             0 8px 32px rgba(0, 0, 0, 0.4),
-            0 0 0 1px rgba(6, 240, 224, 0.1) inset,
-            0 2px 8px rgba(6, 240, 224, 0.05);
+            0 0 0 1px rgba(32, 86, 174, 0.1) inset,
+            0 2px 8px rgba(32, 86, 174, 0.05);
           overflow: hidden;
         }
 
         /* Card header */
         .card-header {
-          background: rgba(6, 240, 224, 0.05);
+          background: rgba(32, 86, 174, 0.05);
           border-bottom: 1px solid rgba(6, 240, 224, 0.15);
           padding: 2rem;
           display: flex;
@@ -253,13 +253,13 @@ export default function ProfilePage() {
           width: 80px;
           height: 80px;
           border-radius: 50%;
-          background: #06f0e0;
+          background: #2056AE;
           display: flex;
           align-items: center;
           justify-content: center;
           font-weight: 700;
           font-size: 1.75rem;
-          color: #050505;
+          color: #FFFFFF;
           flex-shrink: 0;
         }
 
@@ -270,13 +270,13 @@ export default function ProfilePage() {
         .profile-name {
           font-size: 1.75rem;
           font-weight: 700;
-          color: #ffffff;
+          color: #1a1a1a;
           margin-bottom: 0.5rem;
         }
 
         .profile-subtitle {
           font-size: 0.9375rem;
-          color: rgba(255, 255, 255, 0.7);
+          color: rgba(26, 26, 26, 0.7);
           font-weight: 500;
         }
 
@@ -289,9 +289,9 @@ export default function ProfilePage() {
         .action-btn {
           padding: 0.625rem 1.25rem;
           background: transparent;
-          border: 1px solid #06f0e0;
+          border: 1px solid #2056AE;
           border-radius: 6px;
-          color: #06f0e0;
+          color: #2056AE;
           font-weight: 600;
           font-size: 0.875rem;
           cursor: pointer;
@@ -301,12 +301,12 @@ export default function ProfilePage() {
         }
 
         .action-btn:hover {
-          background: rgba(6, 240, 224, 0.1);
-          box-shadow: 0 0 12px rgba(6, 240, 224, 0.3);
+          background: rgba(32, 86, 174, 0.1);
+          box-shadow: 0 0 12px rgba(32, 86, 174, 0.3);
         }
 
         .action-btn:focus {
-          outline: 2px solid #06f0e0;
+          outline: 2px solid #2056AE;
           outline-offset: 2px;
         }
 
@@ -338,14 +338,14 @@ export default function ProfilePage() {
         .meta-label {
           font-size: 0.75rem;
           font-weight: 600;
-          color: #06f0e0;
+          color: #2056AE;
           text-transform: uppercase;
           letter-spacing: 0.05em;
         }
 
         .meta-value {
           font-size: 0.9375rem;
-          color: rgba(255, 255, 255, 0.9);
+          color: rgba(26, 26, 26, 0.9);
         }
 
         .about-section {
@@ -357,12 +357,12 @@ export default function ProfilePage() {
         .section-title {
           font-size: 1rem;
           font-weight: 600;
-          color: #ffffff;
+          color: #1a1a1a;
         }
 
         .about-text {
           font-size: 0.9375rem;
-          color: rgba(255, 255, 255, 0.8);
+          color: rgba(26, 26, 26, 0.8);
           line-height: 1.6;
         }
 
@@ -380,10 +380,10 @@ export default function ProfilePage() {
 
         .skill-tag {
           padding: 0.375rem 0.875rem;
-          background: rgba(6, 240, 224, 0.1);
-          border: 1px solid rgba(6, 240, 224, 0.3);
+          background: rgba(32, 86, 174, 0.1);
+          border: 1px solid rgba(32, 86, 174, 0.3);
           border-radius: 6px;
-          color: #06f0e0;
+          color: #2056AE;
           font-size: 0.8125rem;
           font-weight: 500;
         }
@@ -399,14 +399,14 @@ export default function ProfilePage() {
           align-items: center;
           gap: 0.75rem;
           padding: 0.75rem;
-          background: rgba(6, 240, 224, 0.05);
+          background: rgba(32, 86, 174, 0.05);
           border-radius: 8px;
-          border-left: 3px solid #06f0e0;
+          border-left: 3px solid #2056AE;
         }
 
         .achievement-text {
           font-size: 0.9375rem;
-          color: rgba(255, 255, 255, 0.9);
+          color: rgba(26, 26, 26, 0.9);
         }
 
         /* Right column */
@@ -417,8 +417,8 @@ export default function ProfilePage() {
         }
 
         .side-card {
-          background: rgba(6, 240, 224, 0.03);
-          border: 1px solid rgba(6, 240, 224, 0.15);
+          background: rgba(32, 86, 174, 0.03);
+          border: 1px solid rgba(32, 86, 174, 0.15);
           border-radius: 10px;
           padding: 1.25rem;
         }
@@ -426,7 +426,7 @@ export default function ProfilePage() {
         .side-card-title {
           font-size: 0.875rem;
           font-weight: 600;
-          color: #06f0e0;
+          color: #2056AE;
           margin-bottom: 0.75rem;
           text-transform: uppercase;
           letter-spacing: 0.05em;
@@ -434,14 +434,14 @@ export default function ProfilePage() {
 
         .side-card-content {
           font-size: 0.875rem;
-          color: rgba(255, 255, 255, 0.8);
+          color: rgba(26, 26, 26, 0.8);
           line-height: 1.5;
         }
 
         .side-card-link {
           display: block;
           padding: 0.5rem 0;
-          color: #06f0e0;
+          color: #2056AE;
           text-decoration: none;
           font-size: 0.875rem;
           font-weight: 500;
@@ -453,7 +453,7 @@ export default function ProfilePage() {
         }
 
         .side-card-link:focus {
-          outline: 2px solid #06f0e0;
+          outline: 2px solid #2056AE;
           outline-offset: 2px;
           border-radius: 2px;
         }
@@ -523,7 +523,7 @@ export default function ProfilePage() {
         <div className="content-wrapper">
           <header className="header">
             <div className="brand-section">
-              <TPLogo size={48} className="logo-image" />
+              <img src={tetrapakLogo} alt="Tetra Pak" className="logo-image" style={{ height: '48px', width: 'auto' }} />
             </div>
             <nav className="nav-buttons">
               <button className="nav-btn" onClick={() => navigate('/')}>Dashboard</button>

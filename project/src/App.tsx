@@ -17,11 +17,11 @@ const ProfilePage = lazy(() => import('./components/profile-page'));
 const LoadingFallback = () => (
   <div style={{ 
     minHeight: '100vh', 
-    backgroundColor: '#000000', 
+    backgroundColor: '#FFFFFF', 
     display: 'flex', 
     alignItems: 'center', 
     justifyContent: 'center',
-    color: '#00ffff'
+    color: '#2056AE'
   }}>
     <div>Loading...</div>
   </div>
@@ -32,7 +32,7 @@ function App() {
     <Suspense fallback={<LoadingFallback />}>
       <Routes>
         <Route path="/" element={
-          <div className="min-h-screen" style={{ backgroundColor: '#000000' }}>
+          <div className="min-h-screen" style={{ backgroundColor: '#FFFFFF' }}>
             <WorldMapDemo />
           </div>
         } />

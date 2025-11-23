@@ -1,6 +1,6 @@
 import { useEffect, useTransition } from 'react';
 import { useNavigate } from 'react-router-dom';
-import TPLogo from './tp-logo';
+import tetrapakLogo from '../assets/tetrapak-logo.svg';
 
 export default function DashboardPage() {
   const navigate = useNavigate();
@@ -32,10 +32,10 @@ export default function DashboardPage() {
     <>
       <style>{`
         :root {
-          --bg: #050505;
-          --card: #0b0b0b;
-          --muted: #9aa6af;
-          --accent: #06f0e0;
+          --bg: #FFFFFF;
+          --card: #FFFFFF;
+          --muted: #666666;
+          --accent: #2056AE;
         }
 
         * {
@@ -47,7 +47,7 @@ export default function DashboardPage() {
         body {
           font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
           background: var(--bg);
-          color: #ffffff;
+          color: #1a1a1a;
           min-height: 100vh;
         }
 
@@ -56,8 +56,8 @@ export default function DashboardPage() {
           min-height: 100vh;
           background: var(--bg);
           background-image: 
-            radial-gradient(circle at 20% 30%, rgba(6, 240, 224, 0.03) 0%, transparent 50%),
-            radial-gradient(circle at 80% 70%, rgba(6, 240, 224, 0.03) 0%, transparent 50%);
+            radial-gradient(circle at 20% 30%, rgba(32, 86, 174, 0.03) 0%, transparent 50%),
+            radial-gradient(circle at 80% 70%, rgba(32, 86, 174, 0.03) 0%, transparent 50%);
           padding: 2rem 1rem;
         }
 
@@ -97,9 +97,9 @@ export default function DashboardPage() {
         .nav-btn {
           padding: 0.5rem 1rem;
           background: transparent;
-          border: 1px solid rgba(6, 240, 224, 0.3);
+          border: 1px solid rgba(32, 86, 174, 0.3);
           border-radius: 6px;
-          color: rgba(255, 255, 255, 0.7);
+          color: rgba(26, 26, 26, 0.7);
           font-weight: 500;
           font-size: 0.875rem;
           cursor: pointer;
@@ -110,7 +110,7 @@ export default function DashboardPage() {
         .nav-btn.active {
           color: var(--accent);
           border-color: var(--accent);
-          background: rgba(6, 240, 224, 0.1);
+          background: rgba(32, 86, 174, 0.1);
         }
 
         .nav-btn:hover {
@@ -137,7 +137,7 @@ export default function DashboardPage() {
 
         .welcome-subtitle {
           font-size: 1rem;
-          color: rgba(255, 255, 255, 0.7);
+          color: #D35B36;
         }
 
         /* Main content grid */
@@ -151,12 +151,12 @@ export default function DashboardPage() {
         /* Section cards */
         .section-card {
           background: var(--card);
-          border: 1px solid rgba(6, 240, 224, 0.15);
+          border: 1px solid rgba(32, 86, 174, 0.15);
           border-radius: 14px;
           box-shadow: 
             0 8px 32px rgba(0, 0, 0, 0.4),
-            0 0 0 1px rgba(6, 240, 224, 0.1) inset,
-            0 2px 8px rgba(6, 240, 224, 0.05);
+            0 0 0 1px rgba(32, 86, 174, 0.1) inset,
+            0 2px 8px rgba(32, 86, 174, 0.05);
           padding: 1.5rem;
         }
 
@@ -177,21 +177,21 @@ export default function DashboardPage() {
 
         .announcement-item {
           padding: 1rem;
-          background: rgba(6, 240, 224, 0.03);
-          border: 1px solid rgba(6, 240, 224, 0.1);
+          background: rgba(32, 86, 174, 0.03);
+          border: 1px solid rgba(32, 86, 174, 0.1);
           border-radius: 8px;
         }
 
         .announcement-title {
           font-size: 0.9375rem;
           font-weight: 600;
-          color: #ffffff;
+          color: #1a1a1a;
           margin-bottom: 0.5rem;
         }
 
         .announcement-meta {
           font-size: 0.875rem;
-          color: rgba(255, 255, 255, 0.6);
+          color: rgba(26, 26, 26, 0.6);
           display: flex;
           align-items: center;
           gap: 0.5rem;
@@ -200,8 +200,8 @@ export default function DashboardPage() {
         .priority-tag {
           display: inline-block;
           padding: 0.25rem 0.5rem;
-          background: #e60012;
-          color: #ffffff;
+          background: #D35B36;
+          color: #1a1a1a;
           font-size: 0.75rem;
           font-weight: 600;
           border-radius: 4px;
@@ -218,21 +218,21 @@ export default function DashboardPage() {
 
         .event-item {
           padding: 1rem;
-          background: rgba(6, 240, 224, 0.03);
-          border: 1px solid rgba(6, 240, 224, 0.1);
+          background: rgba(32, 86, 174, 0.03);
+          border: 1px solid rgba(32, 86, 174, 0.1);
           border-radius: 8px;
         }
 
         .event-title {
           font-size: 0.9375rem;
           font-weight: 600;
-          color: #ffffff;
+          color: #1a1a1a;
           margin-bottom: 0.5rem;
         }
 
         .event-meta {
           font-size: 0.875rem;
-          color: rgba(255, 255, 255, 0.6);
+          color: rgba(26, 26, 26, 0.6);
         }
 
         /* Quick Links section */
@@ -248,7 +248,7 @@ export default function DashboardPage() {
 
         .quick-link-card {
           background: var(--card);
-          border: 1px solid rgba(6, 240, 224, 0.15);
+          border: 1px solid rgba(32, 86, 174, 0.15);
           border-radius: 12px;
           padding: 1.5rem;
           display: flex;
@@ -260,10 +260,17 @@ export default function DashboardPage() {
         }
 
         .quick-link-card:hover {
-          background: rgba(6, 240, 224, 0.05);
-          border-color: var(--accent);
+          background: rgba(211, 91, 54, 0.05);
+          border-color: #D35B36;
           transform: translateY(-2px);
-          box-shadow: 0 4px 12px rgba(6, 240, 224, 0.2);
+          box-shadow: 0 4px 12px rgba(211, 91, 54, 0.2);
+        }
+
+        .quick-link-card:active {
+          background: rgba(211, 91, 54, 0.1);
+          border-color: #D35B36;
+          transform: translateY(0);
+          box-shadow: 0 2px 8px rgba(211, 91, 54, 0.3);
         }
 
         .quick-link-icon {
@@ -277,29 +284,29 @@ export default function DashboardPage() {
         }
 
         .icon-playbooks {
-          background: rgba(0, 184, 212, 0.2);
-          color: #00b8d4;
+          background: rgba(105, 207, 246, 0.2);
+          color: #69CFF6;
         }
 
         .icon-templates {
-          background: rgba(6, 240, 224, 0.2);
+          background: rgba(32, 86, 174, 0.2);
           color: var(--accent);
         }
 
         .icon-ask {
-          background: rgba(6, 240, 224, 0.2);
+          background: rgba(32, 86, 174, 0.2);
           color: var(--accent);
         }
 
         .icon-stories {
-          background: rgba(6, 240, 224, 0.2);
+          background: rgba(32, 86, 174, 0.2);
           color: var(--accent);
         }
 
         .quick-link-label {
           font-size: 0.875rem;
           font-weight: 500;
-          color: rgba(255, 255, 255, 0.9);
+          color: rgba(26, 26, 26, 0.9);
           text-align: center;
         }
 
@@ -337,7 +344,7 @@ export default function DashboardPage() {
           {/* Top bar */}
           <header className="topbar">
             <div className="brand-section">
-              <TPLogo size={48} className="logo-image" />
+              <img src={tetrapakLogo} alt="Tetra Pak" className="logo-image" style={{ height: '48px', width: 'auto' }} />
             </div>
             <nav className="nav-buttons">
               <button className="nav-btn active" aria-label="Navigate to Dashboard" onClick={() => handleNavigate('/dashboard')}>Dashboard</button>

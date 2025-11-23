@@ -15,7 +15,7 @@ interface MapProps {
 
 function WorldMap({
   dots = [],
-  lineColor = "#00ffff",
+  lineColor = "#69CFF6",
   onDotClick,
 }: MapProps) {
   const svgRef = useRef<SVGSVGElement>(null);
@@ -28,9 +28,9 @@ function WorldMap({
     const mapInstance = new DottedMap({ height: 100, grid: "diagonal" });
     return mapInstance.getSVG({
       radius: 0.22,
-      color: theme === "dark" ? "#FFFFFF80" : "#00000040",
+      color: theme === "dark" ? "#1a1a1a80" : "#1a1a1a40",
       shape: "circle",
-      backgroundColor: theme === "dark" ? "#000000" : "#000000",
+      backgroundColor: theme === "dark" ? "#FFFFFF" : "#FFFFFF",
     });
   }, [theme]);
 
@@ -78,7 +78,7 @@ function WorldMap({
   }, [onDotClick]);
 
   return (
-    <div className="w-full aspect-[2/1] rounded-lg relative font-sans" style={{ backgroundColor: '#000000', minHeight: '600px' }}>
+    <div className="w-full aspect-[2/1] rounded-lg relative font-sans" style={{ backgroundColor: '#FFFFFF', minHeight: '600px' }}>
       <img
         src={`data:image/svg+xml;utf8,${encodeURIComponent(svgMap)}`}
         className="h-full w-full [mask-image:linear-gradient(to_bottom,transparent,white_10%,white_90%,transparent)] pointer-events-none select-none"

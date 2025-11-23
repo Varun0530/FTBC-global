@@ -27,13 +27,13 @@ export default function GetStartedPage() {
     <>
       <style>{`
         :root {
-          --bg: #021219;
-          --accent: #06f0e0;
-          --card-bg: rgba(20, 30, 35, 0.8);
-          --sidebar-bg: rgba(6, 240, 224, 0.08);
-          --text-primary: #ffffff;
-          --text-secondary: rgba(255, 255, 255, 0.7);
-          --text-muted: rgba(255, 255, 255, 0.5);
+          --bg: #FFFFFF;
+          --accent: #2056AE;
+          --card-bg: rgba(255, 255, 255, 0.95);
+          --sidebar-bg: rgba(32, 86, 174, 0.08);
+          --text-primary: #1a1a1a;
+          --text-secondary: rgba(26, 26, 26, 0.7);
+          --text-muted: rgba(26, 26, 26, 0.5);
         }
 
         * {
@@ -66,12 +66,12 @@ export default function GetStartedPage() {
         /* Main card */
         .card {
           background: var(--card-bg);
-          border: 1px solid rgba(6, 240, 224, 0.15);
+          border: 1px solid rgba(32, 86, 174, 0.15);
           border-radius: 18px;
           box-shadow: 
             0 12px 48px rgba(0, 0, 0, 0.5),
-            0 0 0 1px rgba(6, 240, 224, 0.1) inset,
-            0 4px 16px rgba(6, 240, 224, 0.08);
+            0 0 0 1px rgba(32, 86, 174, 0.1) inset,
+            0 4px 16px rgba(32, 86, 174, 0.08);
           padding: 28px;
           display: flex;
           gap: 28px;
@@ -88,7 +88,7 @@ export default function GetStartedPage() {
         .page-title {
           font-size: 2.5rem;
           font-weight: 700;
-          background: linear-gradient(90deg, var(--accent), #3fe0ff);
+          background: linear-gradient(90deg, var(--accent), #69CFF6);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           background-clip: text;
@@ -171,7 +171,7 @@ export default function GetStartedPage() {
         /* Video spotlight */
         .video-container {
           background: var(--sidebar-bg);
-          border: 1px solid rgba(6, 240, 224, 0.2);
+          border: 1px solid rgba(32, 86, 174, 0.2);
           border-radius: 12px;
           aspect-ratio: 16 / 9;
           position: relative;
@@ -185,7 +185,7 @@ export default function GetStartedPage() {
           width: 64px;
           height: 64px;
           border-radius: 50%;
-          background: rgba(6, 240, 224, 0.9);
+          background: rgba(32, 86, 174, 0.9);
           border: 3px solid var(--text-primary);
           display: flex;
           align-items: center;
@@ -209,7 +209,7 @@ export default function GetStartedPage() {
         .play-button:hover {
           background: var(--accent);
           transform: scale(1.1);
-          box-shadow: 0 0 20px rgba(6, 240, 224, 0.5);
+          box-shadow: 0 0 20px rgba(32, 86, 174, 0.5);
         }
 
         .play-button:focus {
@@ -240,7 +240,7 @@ export default function GetStartedPage() {
           flex: 1;
           aspect-ratio: 16 / 9;
           background: var(--sidebar-bg);
-          border: 1px solid rgba(6, 240, 224, 0.2);
+          border: 1px solid rgba(32, 86, 174, 0.2);
           border-radius: 8px;
           display: flex;
           align-items: center;
@@ -274,7 +274,7 @@ export default function GetStartedPage() {
         /* Sessions */
         .session-block {
           background: var(--sidebar-bg);
-          border: 1px solid rgba(6, 240, 224, 0.2);
+          border: 1px solid rgba(32, 86, 174, 0.2);
           border-radius: 10px;
           padding: 1rem;
           display: flex;
@@ -298,7 +298,7 @@ export default function GetStartedPage() {
         .cta-button {
           width: 100%;
           padding: 0.875rem 1.5rem;
-          background: linear-gradient(90deg, var(--accent), #3fe0ff);
+          background: linear-gradient(90deg, var(--accent), #69CFF6);
           border: none;
           border-radius: 8px;
           color: var(--bg);
@@ -312,7 +312,7 @@ export default function GetStartedPage() {
 
         .cta-button:hover {
           transform: translateY(-2px);
-          box-shadow: 0 8px 24px rgba(6, 240, 224, 0.4);
+          box-shadow: 0 8px 24px rgba(32, 86, 174, 0.4);
         }
 
         .cta-button:focus {

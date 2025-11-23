@@ -11,10 +11,10 @@ function WorldMapDemo() {
   const titleChars = useMemo(() => "TetraPak Champions".split(""), []);
 
   return (
-    <div className="w-full" style={{ backgroundColor: '#000000' }}>
+    <div className="w-full" style={{ backgroundColor: '#FFFFFF' }}>
       <NavbarDemo showAuthButtons={true} />
       <div className="max-w-7xl mx-auto text-center pt-20 pb-12">
-        <p className="font-bold text-3xl md:text-6xl lg:text-7xl" style={{ color: '#00ffff' }}>
+        <p className="font-bold text-3xl md:text-6xl lg:text-7xl" style={{ color: '#2056AE' }}>
           {titleChars.map((char, idx) => (
             <motion.span
               key={idx}
@@ -28,11 +28,11 @@ function WorldMapDemo() {
             </motion.span>
           ))}
         </p>
-        <p className="text-base md:text-xl lg:text-2xl max-w-3xl mx-auto pt-6 pb-16" style={{ color: '#00ffff' }}>
+        <p className="text-base md:text-xl lg:text-2xl max-w-3xl mx-auto pt-6 pb-4" style={{ color: '#D35B36' }}>
           connecting change across the globe
         </p>
       </div>
-      <div className="max-w-7xl mx-auto pb-20">
+      <div className="max-w-7xl mx-auto pb-20 -mt-8">
         <WorldMap
         onDotClick={(dotData) => {
           // Check which region the dot belongs to

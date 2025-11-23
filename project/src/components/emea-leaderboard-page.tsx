@@ -56,18 +56,18 @@ export default function EMEALeaderboardPage() {
 
         body {
           font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-          background: #050505;
-          color: #ffffff;
+          background: #1a1a1a;
+          color: #1a1a1a;
           min-height: 100vh;
         }
 
         /* Main container with radial highlights */
         .leaderboard-container {
           min-height: 100vh;
-          background: #050505;
+          background: #1a1a1a;
           background-image: 
-            radial-gradient(circle at 20% 30%, rgba(6, 240, 224, 0.03) 0%, transparent 50%),
-            radial-gradient(circle at 80% 70%, rgba(6, 240, 224, 0.03) 0%, transparent 50%);
+            radial-gradient(circle at 20% 30%, rgba(32, 86, 174, 0.03) 0%, transparent 50%),
+            radial-gradient(circle at 80% 70%, rgba(32, 86, 174, 0.03) 0%, transparent 50%);
           padding: 2rem 1rem;
         }
 
@@ -79,13 +79,13 @@ export default function EMEALeaderboardPage() {
 
         /* Main card styling */
         .leaderboard-card {
-          background: rgba(20, 20, 20, 0.8);
-          border: 1px solid rgba(6, 240, 224, 0.15);
+          background: rgba(255, 255, 255, 0.95);
+          border: 1px solid rgba(32, 86, 174, 0.15);
           border-radius: 14px;
           box-shadow: 
             0 8px 32px rgba(0, 0, 0, 0.4),
-            0 0 0 1px rgba(6, 240, 224, 0.1) inset,
-            0 2px 8px rgba(6, 240, 224, 0.05);
+            0 0 0 1px rgba(32, 86, 174, 0.1) inset,
+            0 2px 8px rgba(32, 86, 174, 0.05);
           padding: 2.5rem;
           margin-top: 2rem;
         }
@@ -95,7 +95,7 @@ export default function EMEALeaderboardPage() {
           text-align: center;
           font-size: 2rem;
           font-weight: 700;
-          color: #06f0e0;
+          color: #2056AE;
           margin-bottom: 2rem;
           letter-spacing: -0.02em;
         }
@@ -108,7 +108,7 @@ export default function EMEALeaderboardPage() {
         }
 
         .leaderboard-table thead {
-          border-bottom: 1px solid rgba(6, 240, 224, 0.2);
+          border-bottom: 1px solid rgba(32, 86, 174, 0.2);
         }
 
         .leaderboard-table th {
@@ -116,18 +116,18 @@ export default function EMEALeaderboardPage() {
           padding: 1rem 1.25rem;
           font-size: 0.875rem;
           font-weight: 600;
-          color: #06f0e0;
+          color: #2056AE;
           text-transform: uppercase;
           letter-spacing: 0.05em;
         }
 
         .leaderboard-table tbody tr {
-          border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+          border-bottom: 1px solid rgba(26, 26, 26, 0.05);
           transition: background-color 0.2s ease;
         }
 
         .leaderboard-table tbody tr:hover {
-          background: rgba(6, 240, 224, 0.05);
+          background: rgba(32, 86, 174, 0.05);
         }
 
         .leaderboard-table tbody tr:last-child {
@@ -143,7 +143,7 @@ export default function EMEALeaderboardPage() {
         .rank-cell {
           font-size: 1.125rem;
           font-weight: 700;
-          color: #06f0e0;
+          color: #2056AE;
           width: 60px;
         }
 
@@ -162,13 +162,13 @@ export default function EMEALeaderboardPage() {
           width: 40px;
           height: 40px;
           border-radius: 8px;
-          background: #06f0e0;
+          background: #2056AE;
           display: flex;
           align-items: center;
           justify-content: center;
           font-weight: 700;
           font-size: 0.875rem;
-          color: #050505;
+          color: #1a1a1a;
           flex-shrink: 0;
         }
 
@@ -181,17 +181,17 @@ export default function EMEALeaderboardPage() {
         .participant-name {
           font-weight: 600;
           font-size: 0.9375rem;
-          color: #ffffff;
+          color: #1a1a1a;
         }
 
         .participant-location {
           font-size: 0.8125rem;
-          color: rgba(255, 255, 255, 0.6);
+          color: rgba(26, 26, 26, 0.6);
         }
 
         /* Location column */
         .location-cell {
-          color: rgba(255, 255, 255, 0.9);
+          color: rgba(26, 26, 26, 0.9);
           font-size: 0.9375rem;
         }
 
@@ -209,14 +209,14 @@ export default function EMEALeaderboardPage() {
         .adoption-percent {
           font-weight: 700;
           font-size: 0.9375rem;
-          color: #06f0e0;
+          color: #2056AE;
           min-width: 50px;
         }
 
         .progress-bar-container {
           flex: 1;
           height: 8px;
-          background: rgba(255, 255, 255, 0.1);
+          background: rgba(26, 26, 26, 0.1);
           border-radius: 4px;
           overflow: hidden;
           max-width: 200px;
@@ -224,15 +224,15 @@ export default function EMEALeaderboardPage() {
 
         .progress-bar-fill {
           height: 100%;
-          background: #06f0e0;
+          background: #2056AE;
           border-radius: 4px;
           transition: width 0.3s ease;
-          box-shadow: 0 0 8px rgba(6, 240, 224, 0.4);
+          box-shadow: 0 0 8px rgba(32, 86, 174, 0.4);
         }
 
         /* Business unit column */
         .business-unit-cell {
-          color: rgba(255, 255, 255, 0.7);
+          color: rgba(26, 26, 26, 0.7);
           font-size: 0.9375rem;
         }
 
@@ -244,9 +244,9 @@ export default function EMEALeaderboardPage() {
         .view-profile-btn {
           padding: 0.5rem 1.25rem;
           background: transparent;
-          border: 1px solid #06f0e0;
+          border: 1px solid #2056AE;
           border-radius: 6px;
-          color: #06f0e0;
+          color: #2056AE;
           font-weight: 600;
           font-size: 0.875rem;
           cursor: pointer;
@@ -255,12 +255,12 @@ export default function EMEALeaderboardPage() {
         }
 
         .view-profile-btn:hover {
-          background: rgba(6, 240, 224, 0.1);
-          box-shadow: 0 0 12px rgba(6, 240, 224, 0.3);
+          background: rgba(32, 86, 174, 0.1);
+          box-shadow: 0 0 12px rgba(32, 86, 174, 0.3);
         }
 
         .view-profile-btn:focus {
-          outline: 2px solid #06f0e0;
+          outline: 2px solid #2056AE;
           outline-offset: 2px;
         }
 

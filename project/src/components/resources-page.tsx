@@ -192,22 +192,22 @@ export default function ChangeResourcesHub() {
     <>
       <style>{`
         :root {
-          --resources-bg: #01060d;
-          --resources-panel: rgba(10, 16, 25, 0.92);
-          --resources-card: rgba(4, 12, 20, 0.85);
-          --resources-border: rgba(6, 240, 224, 0.2);
-          --resources-muted: rgba(255, 255, 255, 0.65);
-          --resources-accent: #06f0e0;
-          --resources-accent-soft: rgba(6, 240, 224, 0.12);
-          --resources-pill: rgba(6, 240, 224, 0.15);
+          --resources-bg: #FFFFFF;
+          --resources-panel: rgba(255, 255, 255, 0.95);
+          --resources-card: rgba(255, 255, 255, 0.9);
+          --resources-border: rgba(32, 86, 174, 0.2);
+          --resources-muted: rgba(26, 26, 26, 0.65);
+          --resources-accent: #2056AE;
+          --resources-accent-soft: rgba(32, 86, 174, 0.12);
+          --resources-pill: rgba(32, 86, 174, 0.15);
         }
 
         .resources-page {
           min-height: 100vh;
-          background: radial-gradient(circle at 20% 20%, rgba(6, 240, 224, 0.12) 0%, transparent 40%),
-            radial-gradient(circle at 80% 10%, rgba(16, 105, 255, 0.15) 0%, transparent 45%),
+          background:             radial-gradient(circle at 20% 20%, rgba(32, 86, 174, 0.12) 0%, transparent 40%),
+            radial-gradient(circle at 80% 10%, rgba(105, 207, 246, 0.15) 0%, transparent 45%),
             var(--resources-bg);
-          color: #f8fbff;
+          color: #1a1a1a;
           padding: 2rem 1rem 4rem;
         }
 
@@ -225,8 +225,8 @@ export default function ChangeResourcesHub() {
           border-radius: 24px;
           padding: 2.5rem;
           box-shadow:
-            0 25px 60px rgba(0, 0, 0, 0.45),
-            0 0 0 1px rgba(6, 240, 224, 0.08) inset;
+            0 25px 60px rgba(0, 0, 0, 0.1),
+            0 0 0 1px rgba(32, 86, 174, 0.08) inset;
           display: grid;
           grid-template-columns: 1.3fr 0.7fr;
           gap: 2rem;
@@ -249,7 +249,7 @@ export default function ChangeResourcesHub() {
           font-size: clamp(2rem, 3vw, 2.75rem);
           font-weight: 700;
           line-height: 1.2;
-          background: linear-gradient(90deg, var(--resources-accent), #4fd1ff);
+          background: linear-gradient(90deg, var(--resources-accent), #69CFF6);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
         }
@@ -271,8 +271,8 @@ export default function ChangeResourcesHub() {
           padding: 0.85rem 1.5rem;
           border-radius: 999px;
           border: none;
-          background: linear-gradient(120deg, var(--resources-accent), #34ffe4);
-          color: #041019;
+          background: linear-gradient(120deg, #D35B36, rgba(211, 91, 54, 0.8));
+          color: #FFFFFF;
           font-weight: 600;
           cursor: pointer;
           transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -281,7 +281,12 @@ export default function ChangeResourcesHub() {
 
         .primary-btn:hover {
           transform: translateY(-2px);
-          box-shadow: 0 8px 24px rgba(6, 240, 224, 0.4);
+          box-shadow: 0 8px 24px rgba(211, 91, 54, 0.4);
+        }
+
+        .primary-btn:active {
+          transform: translateY(0);
+          box-shadow: 0 4px 12px rgba(211, 91, 54, 0.5);
         }
 
         .secondary-btn {
@@ -297,8 +302,15 @@ export default function ChangeResourcesHub() {
         }
 
         .secondary-btn:hover {
-          background: rgba(6, 240, 224, 0.08);
+          background: rgba(211, 91, 54, 0.08);
+          border-color: #D35B36;
+          color: #D35B36;
           transform: translateY(-2px);
+        }
+
+        .secondary-btn:active {
+          background: rgba(211, 91, 54, 0.12);
+          transform: translateY(0);
         }
 
         .hero-status {
@@ -307,8 +319,8 @@ export default function ChangeResourcesHub() {
           gap: 1rem;
           padding: 1.75rem;
           border-radius: 20px;
-          border: 1px solid rgba(6, 240, 224, 0.08);
-          background: linear-gradient(160deg, rgba(6, 240, 224, 0.08), rgba(4, 8, 18, 0.9));
+          border: 1px solid rgba(32, 86, 174, 0.08);
+          background: linear-gradient(160deg, rgba(32, 86, 174, 0.08), rgba(255, 255, 255, 0.95));
         }
 
         .hero-status__label {
@@ -337,21 +349,28 @@ export default function ChangeResourcesHub() {
 
         .quick-action {
           border-radius: 16px;
-          border: 1px solid rgba(6, 240, 224, 0.12);
+          border: 1px solid rgba(32, 86, 174, 0.12);
           background: var(--resources-card);
           padding: 1.25rem;
           display: flex;
           flex-direction: column;
           gap: 0.5rem;
           cursor: pointer;
-          transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+          transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
           text-align: left;
         }
 
         .quick-action:hover {
           transform: translateY(-4px);
-          border-color: var(--resources-accent);
-          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+          border-color: #D35B36;
+          background: rgba(211, 91, 54, 0.05);
+          box-shadow: 0 20px 40px rgba(211, 91, 54, 0.2);
+        }
+
+        .quick-action:active {
+          transform: translateY(-2px);
+          border-color: #D35B36;
+          box-shadow: 0 10px 20px rgba(211, 91, 54, 0.3);
         }
 
         .quick-action__icon {
@@ -367,7 +386,7 @@ export default function ChangeResourcesHub() {
 
         .quick-action__label {
           font-weight: 600;
-          color: #fff;
+          color: #1a1a1a;
         }
 
         .quick-action__description {
@@ -377,18 +396,18 @@ export default function ChangeResourcesHub() {
 
         .panel {
           border-radius: 24px;
-          border: 1px solid rgba(6, 240, 224, 0.12);
+          border: 1px solid rgba(32, 86, 174, 0.12);
           background: var(--resources-panel);
           padding: 2rem;
           box-shadow:
-            0 30px 60px rgba(0, 0, 0, 0.45),
-            0 0 0 1px rgba(6, 240, 224, 0.05) inset;
+            0 30px 60px rgba(0, 0, 0, 0.1),
+            0 0 0 1px rgba(32, 86, 174, 0.05) inset;
         }
 
         .panel__title {
           font-size: 1.35rem;
           font-weight: 600;
-          color: #fff;
+          color: #1a1a1a;
           display: flex;
           align-items: center;
           gap: 0.75rem;
@@ -411,7 +430,7 @@ export default function ChangeResourcesHub() {
 
         .featured-card {
           border-radius: 18px;
-          border: 1px solid rgba(6, 240, 224, 0.15);
+          border: 1px solid rgba(32, 86, 174, 0.15);
           background: var(--resources-card);
           padding: 1.5rem;
           display: flex;
@@ -427,13 +446,22 @@ export default function ChangeResourcesHub() {
           inset: 0;
           border-radius: inherit;
           border: 1px solid transparent;
-          background: linear-gradient(130deg, rgba(6, 240, 224, 0.2), transparent);
+          background: linear-gradient(130deg, rgba(211, 91, 54, 0.2), transparent);
           opacity: 0;
           transition: opacity 0.2s ease;
         }
 
         .featured-card:hover::after {
           opacity: 1;
+        }
+
+        .featured-card:hover {
+          border-color: #D35B36;
+        }
+
+        .featured-card:active {
+          border-color: #D35B36;
+          transform: scale(0.98);
         }
 
         .featured-card__status {
@@ -446,7 +474,7 @@ export default function ChangeResourcesHub() {
         .resource-section {
           border-radius: 24px;
           background: var(--resources-panel);
-          border: 1px solid rgba(6, 240, 224, 0.08);
+          border: 1px solid rgba(32, 86, 174, 0.08);
           padding: 2rem;
           display: flex;
           flex-direction: column;
@@ -482,7 +510,7 @@ export default function ChangeResourcesHub() {
         .resource-section__title {
           font-size: 1.4rem;
           font-weight: 600;
-          color: #fff;
+          color: #1a1a1a;
         }
 
         .resource-section__description {
@@ -503,15 +531,21 @@ export default function ChangeResourcesHub() {
           gap: 1rem;
           padding: 1.1rem 1.25rem;
           border-radius: 16px;
-          border: 1px solid rgba(6, 240, 224, 0.08);
-          background: rgba(4, 10, 19, 0.9);
+          border: 1px solid rgba(32, 86, 174, 0.08);
+          background: rgba(255, 255, 255, 0.9);
           transition: border-color 0.2s ease, transform 0.2s ease;
           flex-wrap: wrap;
         }
 
         .resource-card:hover {
-          border-color: var(--resources-accent);
+          border-color: #D35B36;
           transform: translateY(-2px);
+        }
+
+        .resource-card:active {
+          border-color: #D35B36;
+          transform: translateY(0);
+          background: rgba(211, 91, 54, 0.05);
         }
 
         .resource-card__meta {
@@ -527,30 +561,30 @@ export default function ChangeResourcesHub() {
           font-weight: 600;
           letter-spacing: 0.05em;
           text-transform: uppercase;
-          border: 1px solid rgba(255, 255, 255, 0.1);
+          border: 1px solid rgba(26, 26, 26, 0.1);
           background: var(--resources-pill);
-          color: #fff;
+          color: #1a1a1a;
         }
 
         .pill--pdf {
-          border-color: rgba(255, 99, 132, 0.5);
-          color: #ff8ea5;
+          border-color: rgba(211, 91, 54, 0.5);
+          color: #D35B36;
         }
 
         .pill--pptx {
-          border-color: rgba(6, 240, 224, 0.6);
+          border-color: rgba(32, 86, 174, 0.6);
           color: var(--resources-accent);
         }
 
         .pill--docx {
-          border-color: rgba(80, 156, 255, 0.5);
-          color: #6cb0ff;
+          border-color: rgba(105, 207, 246, 0.5);
+          color: #69CFF6;
         }
 
         .resource-card__title {
           font-size: 1rem;
           font-weight: 600;
-          color: #fff;
+          color: #1a1a1a;
         }
 
         .resource-card__size {
@@ -569,9 +603,9 @@ export default function ChangeResourcesHub() {
           align-items: center;
           gap: 0.3rem;
           border-radius: 999px;
-          border: 1px solid rgba(255, 255, 255, 0.15);
+          border: 1px solid rgba(26, 26, 26, 0.15);
           padding: 0.45rem 0.95rem;
-          color: #fff;
+          color: #1a1a1a;
           background: transparent;
           font-size: 0.85rem;
           font-weight: 500;
@@ -585,8 +619,14 @@ export default function ChangeResourcesHub() {
         }
 
         .ghost-btn:hover {
-          border-color: var(--resources-accent);
-          color: var(--resources-accent);
+          border-color: #D35B36;
+          color: #D35B36;
+        }
+
+        .ghost-btn:active {
+          border-color: #D35B36;
+          color: #D35B36;
+          background: rgba(211, 91, 54, 0.05);
         }
 
         @media (max-width: 1024px) {

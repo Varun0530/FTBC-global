@@ -62,7 +62,7 @@ export default function NavbarDemo({ showAuthButtons = false }: NavbarDemoProps)
           <NavItems items={navItems} />
           {showAuthButtons && (
             <div className="flex items-center gap-4">
-              <NavbarButton variant="secondary" style={{ color: '#00ffff' }}>Login</NavbarButton>
+              <NavbarButton variant="secondary" style={{ color: '#2056AE' }}>Login</NavbarButton>
               <NavbarButton variant="primary" onClick={() => smoothNavigate('/get-started')}>Get Started</NavbarButton>
             </div>
           )}
@@ -93,14 +93,14 @@ export default function NavbarDemo({ showAuthButtons = false }: NavbarDemoProps)
                   }
                 }}
                 className="relative text-neutral-600 dark:text-neutral-300 text-base md:text-lg"
-                style={{ color: item.isActive ? '#ffffff' : '#00ffff', fontWeight: item.isActive ? 700 : 500 }}
+                style={{ color: item.isActive ? '#2056AE' : '#2056AE', fontWeight: item.isActive ? 700 : 500 }}
                 aria-current={item.isActive ? "page" : undefined}
               >
                 <span className="block">{item.name}</span>
                 {item.isActive && (
                   <span
                     className="absolute left-0 -bottom-1 h-0.5 w-10 rounded-full"
-                    style={{ backgroundColor: '#00ffff' }}
+                    style={{ backgroundColor: '#2056AE' }}
                   />
                 )}
               </a>
@@ -111,7 +111,7 @@ export default function NavbarDemo({ showAuthButtons = false }: NavbarDemoProps)
                   onClick={() => setIsMobileMenuOpen(false)}
                   variant="secondary"
                   className="w-full"
-                  style={{ color: '#00ffff' }}
+                  style={{ color: '#2056AE' }}
                 >
                   Login
                 </NavbarButton>

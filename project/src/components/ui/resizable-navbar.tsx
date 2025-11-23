@@ -7,7 +7,7 @@ import {
   useMotionValueEvent,
 } from "motion/react";
 import React, { useRef, useState } from "react";
-import TPLogo from "../tp-logo";
+import tetrapakLogo from "../../assets/tetrapak-logo.svg";
 
 interface NavbarProps {
   children: React.ReactNode;
@@ -138,7 +138,7 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
           }}
           className="relative px-5 py-2.5"
           style={{
-            color: item.isActive ? '#ffffff' : '#00ffff',
+            color: item.isActive ? '#2056AE' : '#2056AE',
             fontWeight: item.isActive ? 700 : 500,
           }}
           key={`link-${idx}`}
@@ -149,13 +149,13 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
             <motion.div
               layoutId="hovered"
               className="absolute inset-0 h-full w-full rounded-full"
-              style={{ backgroundColor: 'rgba(0, 255, 255, 0.1)' }}
+              style={{ backgroundColor: 'rgba(32, 86, 174, 0.1)' }}
             />
           )}
           {item.isActive && (
             <span
               className="absolute inset-x-8 -bottom-1 h-0.5 rounded-full"
-              style={{ backgroundColor: '#00ffff' }}
+              style={{ backgroundColor: '#2056AE' }}
             />
           )}
           <span className="relative z-20">{item.name}</span>
@@ -259,9 +259,14 @@ export const NavbarLogo = ({ onClick }: { onClick?: () => void }) => {
         if (onClick) onClick();
       }}
       className="relative z-20 mr-4 flex items-center px-2 py-1 cursor-pointer flex-shrink-0"
-      style={{ minWidth: '60px' }}
+      style={{ minWidth: '120px' }}
     >
-      <TPLogo size={56} />
+      <img 
+        src={tetrapakLogo} 
+        alt="Tetra Pak" 
+        className="h-10 w-auto"
+        style={{ maxHeight: '56px' }}
+      />
     </a>
   );
 };
@@ -288,17 +293,20 @@ export const NavbarButton = ({
 
   const variantStyles = {
     primary:
-      "bg-white text-black shadow-[0_0_24px_rgba(0,_255,_255,_0.1),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(0,_255,_255,_0.2),_0_0_4px_rgba(0,_255,_255,_0.08),_0_16px_68px_rgba(0,_0,_0,_0.3)]",
+      "text-white shadow-[0_0_24px_rgba(211,91,54,0.2),_0_1px_1px_rgba(0,0,0,0.05),_0_0_0_1px_rgba(211,91,54,0.3),_0_0_4px_rgba(211,91,54,0.1),_0_16px_68px_rgba(0,0,0,0.2)]",
     secondary: "bg-transparent shadow-none border border-cyan-500/30",
     dark: "bg-black text-white shadow-[0_0_24px_rgba(0,_255,_255,_0.1),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(0,_255,_255,_0.2),_0_0_4px_rgba(0,_255,_255,_0.08),_0_16px_68px_rgba(0,_0,_0,_0.3)]",
     gradient:
       "bg-gradient-to-b from-cyan-500 to-cyan-700 text-white shadow-[0px_2px_0px_0px_rgba(255,255,255,0.3)_inset]",
   };
 
+  const backgroundColorStyle = variant === "primary" ? { backgroundColor: '#D35B36' } : {};
+
   return (
     <Tag
       href={href || undefined}
       className={cn(baseStyles, variantStyles[variant], className)}
+      style={{ ...backgroundColorStyle, ...(props.style || {}) }}
       {...props}
     >
       {children}
